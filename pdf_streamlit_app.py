@@ -15,7 +15,7 @@ def get_gemini_response(api_key, pdf_file_path, prompt):
         # Tải tệp lên
         uploaded_file = genai.upload_file(path=pdf_file_path)
         
-        model = genai.GenerativeModel('models/gemini-1.5-pro-latest')
+        model = genai.GenerativeModel('models/gemini-1.5-pro')
         
         # Gửi yêu cầu
         response = model.generate_content([prompt, uploaded_file])
